@@ -1,0 +1,28 @@
+[ Gym ]  
+  | GymID (PK)  
+  | Name  
+  | Address  
+  | PhoneNumber  
+        |  
+   ______________  
+   |            |  
+[ Member ]   [ Coach ]  
+  | MemberID (PK)    | CoachID (PK)  
+  | LastName         | LastName  
+  | FirstName        | FirstName  
+  | Address          | Age  
+  | DateOfBirth     | Specialty  
+  | Gender          | GymID (FK)  
+  | GymID (FK)  
+        |  
+   [ Session ]  
+      | SessionID (PK)  
+      | TypeOfSport  
+      | Schedule  
+      | GymID (FK)  
+      | MaxMembers  
+        |  
+   [ SessionCoaches ]  
+      | SessionCoachID (PK)  
+      | SessionID (FK)  
+      | CoachID (FK)
